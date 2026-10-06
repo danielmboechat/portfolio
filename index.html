@@ -32,15 +32,15 @@
 
     <style>
         :root {
-            --primary: #0f2a4a;          /* Navy escuro para títulos */
-            --primary-gradient: #1a3a60; /* Navy médio para o gradiente do topo */
-            --accent: #2563eb;           /* Azul vibrante para botões, tags e links */
-            --accent-hover: #1d4ed8;     /* Azul escuro no hover */
-            --bg-body: #fbf9f5;          /* Fundo bege/areia elegante */
-            --bg-card: #ffffff;          /* Cartões brancos para destaque */
-            --text-main: #1e293b;        /* Texto principal */
-            --text-muted: #64748b;       /* Texto secundário */
-            --border: #e8e2d5;           /* Borda em tom bege sutil */
+            --primary: #111812;          /* Preto fechado com tom de fundo verde-escuro */
+            --primary-gradient: #223626; /* Verde musgo escuro para o topo */
+            --accent: #2e5a36;           /* Verde musgo para botões, tags e links */
+            --accent-hover: #214227;     /* Verde musgo fechado no hover */
+            --bg-body: #f2f5f3;          /* Fundo suave com leve tom musgo/acinzentado */
+            --bg-card: #ffffff;          /* Cartões brancos para contraste */
+            --text-main: #161d17;        /* Texto principal */
+            --text-muted: #4e5c50;       /* Texto secundário */
+            --border: #d4ded6;           /* Borda em tom musgo sutil */
             --gold: #d97706;
             --gold-bg: #fffbeb;
         }
@@ -87,7 +87,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--accent);
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
             margin-bottom: 8px;
         }
 
@@ -99,7 +99,7 @@
 
         .hero .subtitle {
             font-size: 1.2rem;
-            color: #cbd5e1;
+            color: #d1ded3;
             font-weight: 400;
         }
 
@@ -108,7 +108,7 @@
             flex-wrap: wrap;
             gap: 15px;
             font-size: 0.95rem;
-            color: #e2e8f0;
+            color: #e2ebe4;
             margin-top: 10px;
         }
 
@@ -246,7 +246,7 @@
             text-transform: uppercase;
             padding: 4px 8px;
             border-radius: 4px;
-            background-color: #eff6ff;
+            background-color: #eaf2eb;
             color: var(--accent);
             margin-bottom: 12px;
             width: fit-content;
@@ -298,32 +298,32 @@
         }
 
         .drive-banner {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            border-left: 5px solid #16a34a;
+            background: #f0f8f2;
+            border: 1px solid #b8e2c0;
+            border-left: 5px solid var(--accent);
             padding: 24px;
             border-radius: 12px;
         }
 
         .drive-banner h3 {
-            color: #166534;
+            color: #173b1f;
             font-size: 1.2rem;
             margin-bottom: 8px;
         }
 
         .drive-banner p {
-            color: #14532d;
+            color: #1a4223;
             font-size: 0.95rem;
             margin-bottom: 16px;
         }
 
         .btn-success {
-            background-color: #16a34a;
+            background-color: var(--accent);
             color: #ffffff;
         }
 
         .btn-success:hover {
-            background-color: #15803d;
+            background-color: var(--accent-hover);
         }
 
         /* SKILLS & BADGES */
@@ -334,7 +334,7 @@
         }
 
         .badge {
-            background: #e8e2d5;
+            background: #e2ebe4;
             color: var(--primary);
             padding: 6px 14px;
             border-radius: 20px;
