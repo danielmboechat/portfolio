@@ -342,6 +342,117 @@
             font-weight: 500;
         }
 
+        /* GALERIA DE FOTOS / CARROSSEL */
+        .carousel-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 0;
+            scrollbar-width: thin;
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .carousel-container::-webkit-scrollbar-thumb {
+            background-color: var(--border);
+            border-radius: 10px;
+        }
+
+        .carousel-card {
+            min-width: 280px;
+            max-width: 320px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .carousel-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .carousel-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-card .caption {
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .carousel-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 10;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .carousel-btn:hover {
+            background: var(--border);
+        }
+
+        /* MODAL EXPANSÍVEL (LIGHTBOX) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
         footer {
             text-align: center;
             padding-top: 40px;
@@ -560,11 +671,114 @@
             </div>
         </section>
 
+        <!-- GALERIA DE FOTOS / BASTIDORES DE CAMPO -->
+        <section>
+            <h2 class="section-title">📸 Atuação e Bastidores</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn" onclick="scrollCarousel(-320)">❮</button>
+
+                <div class="carousel-container" id="carousel">
+                    <!-- Foto 1 -->
+                    <div class="carousel-card" onclick="openModal('galeria (1).jpg')">
+                        <img src="galeria (1).jpg" alt="Atuação e Bastidores 1">
+                        <div class="caption">Cobertura de campo e reportagens na Região Amazônica.</div>
+                    </div>
+
+                    <!-- Foto 2 -->
+                    <div class="carousel-card" onclick="openModal('galeria (2).jpg')">
+                        <img src="galeria (2).jpg" alt="Atuação e Bastidores 2">
+                        <div class="caption">Bastidores de gravação e reportagem multimídia.</div>
+                    </div>
+
+                    <!-- Foto 3 -->
+                    <div class="carousel-card" onclick="openModal('galeria (3).jpg')">
+                        <img src="galeria (3).jpg" alt="Atuação e Bastidores 3">
+                        <div class="caption">Condução de entrevistas e coberturas jornalísticas.</div>
+                    </div>
+
+                    <!-- Foto 4 -->
+                    <div class="carousel-card" onclick="openModal('galeria (4).jpg')">
+                        <img src="galeria (4).jpg" alt="Atuação e Bastidores 4">
+                        <div class="caption">Atuação em comunicação institucional e eventos.</div>
+                    </div>
+
+                    <!-- Foto 5 -->
+                    <div class="carousel-card" onclick="openModal('galeria (5).jpg')">
+                        <img src="galeria (5).jpg" alt="Atuação e Bastidores 5">
+                        <div class="caption">Coordenação de equipe e produção em redação.</div>
+                    </div>
+
+                    <!-- Foto 6 -->
+                    <div class="carousel-card" onclick="openModal('galeria (6).jpg')">
+                        <img src="galeria (6).jpg" alt="Atuação e Bastidores 6">
+                        <div class="caption">Registros em pautas especiais e projetos editoriais.</div>
+                    </div>
+
+                    <!-- Foto 7 -->
+                    <div class="carousel-card" onclick="openModal('galeria (7).jpg')">
+                        <img src="galeria (7).jpg" alt="Atuação e Bastidores 7">
+                        <div class="caption">Cobertura jornalística em eventos e solenidades.</div>
+                    </div>
+
+                    <!-- Foto 8 -->
+                    <div class="carousel-card" onclick="openModal('galeria (8).jpg')">
+                        <img src="galeria (8).jpg" alt="Atuação e Bastidores 8">
+                        <div class="caption">Trabalho de campo e relacionamento comunitário.</div>
+                    </div>
+
+                    <!-- Foto 9 -->
+                    <div class="carousel-card" onclick="openModal('galeria (9).jpg')">
+                        <img src="galeria (9).jpg" alt="Atuação e Bastidores 9">
+                        <div class="caption">Atuação na produção audiovisual e de notícias.</div>
+                    </div>
+
+                    <!-- Foto 10 -->
+                    <div class="carousel-card" onclick="openModal('galeria (10).jpg')">
+                        <img src="galeria (10).jpg" alt="Atuação e Bastidores 10">
+                        <div class="caption">Acompanhamento e suporte em transmissões.</div>
+                    </div>
+
+                    <!-- Foto 11 -->
+                    <div class="carousel-card" onclick="openModal('galeria (11).jpg')">
+                        <img src="galeria (11).jpg" alt="Atuação e Bastidores 11">
+                        <div class="caption">Acervo de registros da trajetória profissional.</div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn" onclick="scrollCarousel(320)">❯</button>
+            </div>
+        </section>
+
         <footer>
             <p>© Daniel Boechat — Jornalista & Gestor de Mídia Digital</p>
         </footer>
 
     </div>
+
+    <!-- MODAL PARA EXPANDIR IMAGEM (LIGHTBOX) -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="imgExpanded" alt="Imagem Expandida">
+    </div>
+
+    <!-- SCRIPT DO CARROSSEL E MODAL -->
+    <script>
+        function scrollCarousel(distance) {
+            document.getElementById('carousel').scrollBy({
+                left: distance,
+                behavior: 'smooth'
+            });
+        }
+
+        function openModal(imgSrc) {
+            document.getElementById('imgExpanded').src = imgSrc;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
 
 </body>
 </html>
