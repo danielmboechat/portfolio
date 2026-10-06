@@ -1,234 +1,612 @@
-```
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- TÍTULO E METADADOS BÁSICOS -->
+    <title>Daniel Boechat | Jornalista & Gestor de Mídia Digital</title>
+    <meta name="description" content="Portfólio profissional de Daniel Boechat. Jornalista e Gestor de Mídia Digital especialista em SEO, crescimento de audiência, estratégia editorial e gestão de produtos.">
+    <meta name="author" content="Daniel Boechat">
 
-    
-    
-    
-    
-    
-    
-    
+    <!-- OPEN GRAPH (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://danielmboechat.github.io/portfolio/">
+    <meta property="og:title" content="Daniel Boechat | Jornalista & Gestor de Mídia Digital">
+    <meta property="og:description" content="Jornalista e Gestor de Mídia Digital especialista em SEO, crescimento de audiência, estratégia editorial e gestão de performance. Confira cases e reportagens.">
+    <meta property="og:image" content="https://danielmboechat.github.io/portfolio/foto-perfil.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Portfólio Daniel Boechat">
 
-    
-    
-    
-    
-    
-    
-    
-    
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://danielmboechat.github.io/portfolio/">
+    <meta name="twitter:title" content="Daniel Boechat | Jornalista & Gestor de Mídia Digital">
+    <meta name="twitter:description" content="Jornalista e Gestor de Mídia Digital especialista em SEO, crescimento de audiência, estratégia editorial e gestão de performance. Confira cases e reportagens.">
+    <meta name="twitter:image" content="https://danielmboechat.github.io/portfolio/foto-perfil.jpg">
 
-    
-    
-    
-    
-    
-    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --gold: #d97706;
+            --gold-bg: #fffbeb;
+        }
 
-    
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER / HERO */
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        /* ESTILO DA FOTO DE PERFIL */
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            margin-bottom: 8px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+
+        .hero .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            margin-top: 10px;
+        }
+
+        .hero .meta a {
+            color: #cbd5e1;
+            text-decoration: none;
+        }
+
+        .hero .meta a:hover {
+            text-decoration: underline;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #475569;
+        }
+
+        .btn-outline:hover {
+            background-color: #334155;
+        }
+
+        /* SECTIONS */
+        section {
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* BIO & RESUMO */
+        .bio-text {
+            font-size: 1.05rem;
+            color: var(--text-main);
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        /* METRICS & HIGHLIGHT CARDS */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .metric-card {
+            background: var(--bg-card);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--accent);
+        }
+
+        .metric-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .metric-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* PORTFOLIO GRID */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: #eff6ff;
+            color: var(--accent);
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .card h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            margin-top: 12px;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        /* BANNER PREMIAÇÃO & DRIVE */
+        .special-banner {
+            background: var(--gold-bg);
+            border: 1px solid #fde68a;
+            border-left: 5px solid var(--gold);
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .special-banner h3 {
+            color: #92400e;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .special-banner p {
+            color: #78350f;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .drive-banner {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 5px solid #16a34a;
+            padding: 24px;
+            border-radius: 12px;
+        }
+
+        .drive-banner h3 {
+            color: #166534;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .drive-banner p {
+            color: #14532d;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .btn-success {
+            background-color: #16a34a;
+            color: #ffffff;
+        }
+
+        .btn-success:hover {
+            background-color: #15803d;
+        }
+
+        /* TIMELINE / CV */
+        .timeline-item {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 16px;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .timeline-date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .timeline-role {
+            color: var(--accent);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .timeline-desc ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+
+        .timeline-desc li {
+            margin-bottom: 4px;
+        }
+
+        /* SKILLS & BADGES */
+        .skills-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .badge {
+            background: #e2e8f0;
+            color: #334155;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / HERO -->
     <header>
-        <div>
+        <div class="container hero">
+            <!-- FOTO DE PERFIL -->
+            <img src="foto-perfil.jpg" alt="Foto de Daniel Boechat" class="profile-img">
+
             <h1>Daniel Boechat</h1>
-            <div>Jornalista &amp; Gestor de Mídia Digital (MTB - 0002221/AM)</div>
-            <div>
+            <div class="subtitle">Jornalista & Gestor de Mídia Digital (MTB - 0002221/AM)</div>
+            <div class="meta">
                 <span>📍 São José dos Campos, SP</span>
                 <span>✉️ <a href="mailto:danielmboechat@gmail.com">danielmboechat@gmail.com</a></span>
-                <span>📞 <a href="about:invalid#zClosurez">(12) 99181-0678</a></span>
+                <span>📞 <a href="tel:+5512991810678">(12) 99181-0678</a></span>
             </div>
-            <div>
-                <a href="https://www.linkedin.com/in/danboex/" target="_blank" rel="noopener noreferrer">
+            <div class="hero-buttons">
+                <a href="https://www.linkedin.com/in/danboex/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                     LinkedIn ↗
                 </a>
-                <a href="https://instagram.com/danielboechat_" target="_blank" rel="noopener noreferrer">
+                <a href="https://instagram.com/danielboechat_" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                     Instagram ↗
                 </a>
             </div>
         </div>
     </header>
 
-    <div>
+    <div class="container">
 
-        
+        <!-- RESUMO PROFISSIONAL -->
         <section>
-            <h2>👤 Perfil Profissional</h2>
-            <div>
+            <h2 class="section-title">👤 Perfil Profissional</h2>
+            <div class="bio-text">
                 Jornalista e gestor de comunicação com sólida trajetória em coordenação de equipes multimídia, desenvolvimento de pautas estratégicas e gestão de produtos digitais. Especialista em crescimento de audiência digital (SEO e monetização), inteligência artificial aplicada ao jornalismo e gestão empresarial de veículos e agências.
             </div>
         </section>
 
-        
+        <!-- DESTAQUES DE PERFORMANCE & CASES -->
         <section>
-            <h2>📊 Cases de Sucesso &amp; Performance</h2>
-            <div>
-                <div>
+            <h2 class="section-title">📊 Cases de Sucesso & Performance</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
                     <h3>Grupo Norte / TV Norte (SBT)</h3>
-                    <div>+145% de Cliques Orgânicos</div>
+                    <div class="metric-value">+145% de Cliques Orgânicos</div>
                     <p>Reestruturação da estratégia de SEO do Portal Norte (de 38,2k para 93,7k cliques trimestrais) e alta de <strong>+407% na receita digital</strong> (AdSense/Display).</p>
                 </div>
-                <div>
+                <div class="metric-card">
                     <h3>JCK Corretora de Seguros</h3>
-                    <div>+23,3% em Comissões</div>
+                    <div class="metric-value">+23,3% em Comissões</div>
                     <p>Elevação da média de faturamento recorrente (de R$ 51,1k para R$ 63k/mês) e recorde histórico de <strong>R$ 81,5 mil em comissões</strong> em dez/2025 (+59%).</p>
                 </div>
             </div>
         </section>
 
-        
+        <!-- PREMIAÇÃO -->
         <section>
-            <h2>🏆 Premiação</h2>
-            <div>
+            <h2 class="section-title">🏆 Premiação</h2>
+            <div class="special-banner">
                 <h3>Prêmio Sebrae de Jornalismo — Etapa Estadual Amazonas (2025)</h3>
                 <p>Conquista de feito inédito na etapa estadual do Prêmio Sebrae de Jornalismo com cobertura especial focada no desenvolvimento regional e empreendedorismo.</p>
-                <a href="https://thomazrural.com.br/2025/09/27/amazonas-conquista-feito-inedito-na-etapa-estadual-do-premio-sebrae-de-jornalismo/" target="_blank" rel="noopener noreferrer">
+                <a href="https://thomazrural.com.br/2025/09/27/amazonas-conquista-feito-inedito-na-etapa-estadual-do-premio-sebrae-de-jornalismo/" target="_blank" rel="noopener noreferrer" class="card-link" style="color: var(--gold);">
                     Ver Matéria sobre a Premiação ↗
                 </a>
             </div>
         </section>
 
-        
+        <!-- DESTAQUES DE PRODUÇÃO / REPORTAGENS -->
         <section>
-            <h2>📰 Reportagens e Trabalhos de Destaque</h2>
+            <h2 class="section-title">📰 Reportagens e Trabalhos de Destaque</h2>
             
-            <div>
-                
-                <div>
+            <div class="portfolio-grid">
+                <!-- Card 1 -->
+                <div class="card">
                     <div>
-                        <span>Cultura &amp; Sociedade</span>
+                        <span class="card-tag">Cultura & Sociedade</span>
                         <h4>Ancestralidade Sateré-Mawé mantém tradição indígena viva com o ritual da Tucandeira</h4>
                     </div>
-                    <a href="https://portalnorte.com.br/noticias/amazonas/2025/04/19/ancestralidade-satere-mawe-mantem-tradicao-indigena-viva-com-o-ritual-da-tucandeira/" target="_blank" rel="noopener noreferrer">Ler no Portal Norte ↗</a>
+                    <a href="https://portalnorte.com.br/noticias/amazonas/2025/04/19/ancestralidade-satere-mawe-mantem-tradicao-indigena-viva-com-o-ritual-da-tucandeira/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Portal Norte ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 2 -->
+                <div class="card">
                     <div>
-                        <span>Moda &amp; Identidade</span>
+                        <span class="card-tag">Moda & Identidade</span>
                         <h4>Ateliê Derequine promove moda indígena no Amazonas</h4>
                     </div>
-                    <a href="https://vanguardadonorte.com.br/cultura/atelie-derequine-promove-moda-indigena-no-amazonas/" target="_blank" rel="noopener noreferrer">Ler no Vanguarda do Norte ↗</a>
+                    <a href="https://vanguardadonorte.com.br/cultura/atelie-derequine-promove-moda-indigena-no-amazonas/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Vanguarda do Norte ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 3 -->
+                <div class="card">
                     <div>
-                        <span>Sustentabilidade</span>
+                        <span class="card-tag">Sustentabilidade</span>
                         <h4>Grife amazônica aposta na fibra do curauá para promover revolução silenciosa na moda</h4>
                     </div>
-                    <a href="https://portalnorte.com.br/noticias/2025/06/06/grife-amazonica-aposta-na-fibra-do-curaua-para-promover-revolucao-silenciosa-na-moda/" target="_blank" rel="noopener noreferrer">Ler no Portal Norte ↗</a>
+                    <a href="https://portalnorte.com.br/noticias/2025/06/06/grife-amazonica-aposta-na-fibra-do-curaua-para-promover-revolucao-silenciosa-na-moda/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Portal Norte ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 4 -->
+                <div class="card">
                     <div>
-                        <span>Meio Ambiente</span>
+                        <span class="card-tag">Meio Ambiente</span>
                         <h4>Seca no Amazonas: Rio Negro atinge menor nível histórico e supera 2023</h4>
                     </div>
-                    <a href="https://portalnorte.com.br/noticias/amazonas/2024/10/03/seca-no-amazonas-rio-negro-atinge-menor-nivel-historico-e-supera-2023/" target="_blank" rel="noopener noreferrer">Ler no Portal Norte ↗</a>
+                    <a href="https://portalnorte.com.br/noticias/amazonas/2024/10/03/seca-no-amazonas-rio-negro-atinge-menor-nivel-historico-e-supera-2023/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Portal Norte ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 5 -->
+                <div class="card">
                     <div>
-                        <span>Economia</span>
+                        <span class="card-tag">Economia</span>
                         <h4>Empréstimo consignado: herói ou vilão no endividamento?</h4>
                     </div>
-                    <a href="https://vanguardadonorte.com.br/economia/emprestimo-consignado-heroi-ou-vilao-no-endividamento/" target="_blank" rel="noopener noreferrer">Ler no Vanguarda do Norte ↗</a>
+                    <a href="https://vanguardadonorte.com.br/economia/emprestimo-consignado-heroi-ou-vilao-no-endividamento/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Vanguarda do Norte ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 6 -->
+                <div class="card">
                     <div>
-                        <span>Mercado Financeiro</span>
+                        <span class="card-tag">Mercado Financeiro</span>
                         <h4>EQI aposta em democratização de investimentos e amplia atuação no mercado regional</h4>
                     </div>
-                    <a href="https://vanguardadonorte.com.br/economia/eqi-aposta-em-democratizacao-de-investimentos-e-amplia-atuacao-no-mercado-regional/" target="_blank" rel="noopener noreferrer">Ler no Vanguarda do Norte ↗</a>
+                    <a href="https://vanguardadonorte.com.br/economia/eqi-aposta-em-democratizacao-de-investimentos-e-amplia-atuacao-no-mercado-regional/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Vanguarda do Norte ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 7 -->
+                <div class="card">
                     <div>
-                        <span>Saúde &amp; Inclusão</span>
+                        <span class="card-tag">Saúde & Inclusão</span>
                         <h4>AMA promove cuidado assistencial ao autismo em Manaus</h4>
                     </div>
-                    <a href="https://vanguardadonorte.com.br/amazonas/ama-promove-cuidado-assistencial-ao-autismo-em-manaus/" target="_blank" rel="noopener noreferrer">Ler no Vanguarda do Norte ↗</a>
+                    <a href="https://vanguardadonorte.com.br/amazonas/ama-promove-cuidado-assistencial-ao-autismo-em-manaus/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Vanguarda do Norte ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 8 -->
+                <div class="card">
                     <div>
-                        <span>Cultura &amp; Eventos</span>
+                        <span class="card-tag">Cultura & Eventos</span>
                         <h4>Com BK e Victor Xamã, O Bailinn tem recorde de público</h4>
                     </div>
-                    <a href="https://portalnorte.com.br/noticias/amazonas/2024/07/22/com-bk-e-victor-xama-o-bailinn-tem-recorde-de-publico/" target="_blank" rel="noopener noreferrer">Ler no Portal Norte ↗</a>
+                    <a href="https://portalnorte.com.br/noticias/amazonas/2024/07/22/com-bk-e-victor-xama-o-bailinn-tem-recorde-de-publico/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Portal Norte ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 9 -->
+                <div class="card">
                     <div>
-                        <span>Humanitário / ONU</span>
+                        <span class="card-tag">Humanitário / ONU</span>
                         <h4>OIM ajuda a prevenir COVID-19 entre comunidades indígenas e ribeirinhas brasileiras</h4>
                     </div>
-                    <a href="https://brasil.un.org/pt-br/110023-oim-ajuda-prevenir%C2%A0covid-19-entre-comunidades-ind%C3%ADgenas-e-ribeirinhas-brasileiras" target="_blank" rel="noopener noreferrer">Ler na ONU Brasil ↗</a>
+                    <a href="https://brasil.un.org/pt-br/110023-oim-ajuda-prevenir%C2%A0covid-19-entre-comunidades-ind%C3%ADgenas-e-ribeirinhas-brasileiras" target="_blank" rel="noopener noreferrer" class="card-link">Ler na ONU Brasil ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 10 -->
+                <div class="card">
                     <div>
-                        <span>Humanitário / ONU</span>
+                        <span class="card-tag">Humanitário / ONU</span>
                         <h4>Exposição fotográfica apresenta contexto diverso da migração no Brasil</h4>
                     </div>
-                    <a href="https://brasil.un.org/pt-br/106061-exposi%C3%A7%C3%A3o-fotogr%C3%A1fica-apresenta-contexto-diverso-da-migra%C3%A7%C3%A3o-no-brasil" target="_blank" rel="noopener noreferrer">Ler na ONU Brasil ↗</a>
+                    <a href="https://brasil.un.org/pt-br/106061-exposi%C3%A7%C3%A3o-fotogr%C3%A1fica-apresenta-contexto-diverso-da-migra%C3%A7%C3%A3o-no-brasil" target="_blank" rel="noopener noreferrer" class="card-link">Ler na ONU Brasil ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 11 -->
+                <div class="card">
                     <div>
-                        <span>Cultura Regional</span>
+                        <span class="card-tag">Cultura Regional</span>
                         <h4>Dia do Folclore promove valorização da cultura do Vale do Paraíba</h4>
                     </div>
-                    <a href="https://www.012news.com.br/dia-do-folclore-promove-valorizacao-da-cultura-do-vale-do-paraiba/" target="_blank" rel="noopener noreferrer">Ler no 012 News ↗</a>
+                    <a href="https://www.012news.com.br/dia-do-folclore-promove-valorizacao-da-cultura-do-vale-do-paraiba/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no 012 News ↗</a>
                 </div>
 
-                
-                <div>
+                <!-- Card 12 -->
+                <div class="card">
                     <div>
-                        <span>Esportes</span>
+                        <span class="card-tag">Esportes</span>
                         <h4>São José E.C. apresenta comissão técnica e filosofia de jogo com técnico Max Sandro</h4>
                     </div>
-                    <a href="https://www.012news.com.br/sao-jose-e-c-apresenta-comissao-tecnica-e-filosofia-de-jogo-com-tecnico-max-sandro/" target="_blank" rel="noopener noreferrer">Ler no 012 News ↗</a>
+                    <a href="https://www.012news.com.br/sao-jose-e-c-apresenta-comissao-tecnica-e-filosofia-de-jogo-com-tecnico-max-sandro/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no 012 News ↗</a>
                 </div>
             </div>
         </section>
 
-        
+        <!-- ACERVO DE JORNALISMO IMPRESSO (DRIVE) -->
         <section>
-            <h2>🗞️ Jornalismo Impresso</h2>
-            <div>
+            <h2 class="section-title">🗞️ Jornalismo Impresso</h2>
+            <div class="drive-banner">
                 <h3>Acervo de Páginas e Edições Impressas</h3>
                 <p>Acesse o repositório completo contendo reportagens especiais, capas e diagramações publicadas em jornais impressos ao longo da trajetória profissional.</p>
-                <a href="https://drive.google.com/drive/folders/10gX91xzZtCSWbrOHubbnxGUPMBCM09N5" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/drive/folders/10gX91xzZtCSWbrOHubbnxGUPMBCM09N5" target="_blank" rel="noopener noreferrer" class="btn btn-success">
                     📁 Abrir Pasta no Google Drive ↗
                 </a>
             </div>
         </section>
 
-        
+        <!-- TRAJETÓRIA PROFISSIONAL -->
         <section>
-            <h2>💼 Trajetória Profissional</h2>
+            <h2 class="section-title">💼 Trajetória Profissional</h2>
 
-            <div>
-                <div>
-                    <span>JCK Corretora de Seguros</span>
-                    <span>07/2025 — 10/2026</span>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">JCK Corretora de Seguros</span>
+                    <span class="timeline-date">07/2025 — 10/2026</span>
                 </div>
-                <div>Gestor Empresarial / Assessor de Comunicação</div>
-                <div>
+                <div class="timeline-role">Gestor Empresarial / Assessor de Comunicação</div>
+                <div class="timeline-desc">
                     <ul>
                         <li>Liderança na reestruturação administrativa, controle financeiro, gestão de pessoas e cultura digital.</li>
                         <li>Desenvolvimento e gestão do portal institucional com SEO <i>on-page</i> e <i>off-page</i>.</li>
@@ -237,13 +615,13 @@
                 </div>
             </div>
 
-            <div>
-                <div>
-                    <span>Grupo Norte de Comunicação (TV Norte / SBT)</span>
-                    <span>04/2024 — 07/2025</span>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Grupo Norte de Comunicação (TV Norte / SBT)</span>
+                    <span class="timeline-date">04/2024 — 07/2025</span>
                 </div>
-                <div>Coordenador de Jornalismo Digital | Supervisor</div>
-                <div>
+                <div class="timeline-role">Coordenador de Jornalismo Digital | Supervisor</div>
+                <div class="timeline-desc">
                     <ul>
                         <li>Coordenação de equipe multidisciplinar com 18 profissionais (jornalistas, editores de vídeo e estagiárias).</li>
                         <li>Estratégia de SEO com alta de +145% nos cliques de busca e +69,7% em impressões no Portal Norte.</li>
@@ -252,71 +630,72 @@
                 </div>
             </div>
 
-            <div>
-                <div>
-                    <span>Vanguarda do Norte</span>
-                    <span>02/2023 — 03/2024</span>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Vanguarda do Norte</span>
+                    <span class="timeline-date">02/2023 — 03/2024</span>
                 </div>
-                <div>Repórter</div>
-                <div>
+                <div class="timeline-role">Repórter</div>
+                <div class="timeline-desc">
                     Cobertura multimídia (texto e vídeo) nas editorias de Esporte, Cultura, Economia, Política, Polícia e Cotidiano.
                 </div>
             </div>
 
-            <div>
-                <div>
-                    <span>ONU Migração (OIM)</span>
-                    <span>11/2020 — 02/2021</span>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">ONU Migração (OIM)</span>
+                    <span class="timeline-date">11/2020 — 02/2021</span>
                 </div>
-                <div>Field Assistant — Assessor de Comunicação e Imprensa</div>
-                <div>
+                <div class="timeline-role">Field Assistant — Assessor de Comunicação e Imprensa</div>
+                <div class="timeline-desc">
                     Elaboração de plano regional de comunicação para a Região Norte, cobertura fotográfica e relatórios institucionais em português, inglês e espanhol.
                 </div>
             </div>
 
-            <div>
-                <div>
-                    <span>Portal Em Tempo</span>
-                    <span>11/2019 — 11/2020</span>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Portal Em Tempo</span>
+                    <span class="timeline-date">11/2019 — 11/2020</span>
                 </div>
-                <div>Repórter</div>
-                <div>
+                <div class="timeline-role">Repórter</div>
+                <div class="timeline-desc">
                     Produção de reportagens especiais para impresso e portal, além de apresentação e edição de vídeo.
                 </div>
             </div>
         </section>
 
-        
+        <!-- ESPECIALIZAÇÕES & HABILIDADES -->
         <section>
-            <h2>🎓 Cursos e Especializações</h2>
-            <div>
-                <ul>
-                    <li><strong>Lab de Dados e Monetização</strong> — Google News Initiative &amp; Monks</li>
-                    <li><strong>Jornada de Produto Digital</strong> — Escola Britânica de Artes Criativas e Tecnologia (EBAC)</li>
+            <h2 class="section-title">🎓 Cursos e Especializações</h2>
+            <div class="bio-text" style="margin-bottom: 20px;">
+                <ul style="padding-left: 20px;">
+                    <li style="margin-bottom: 8px;"><strong>Lab de Dados e Monetização</strong> — Google News Initiative & Monks</li>
+                    <li style="margin-bottom: 8px;"><strong>Jornada de Produto Digital</strong> — Escola Britânica de Artes Criativas e Tecnologia (EBAC)</li>
                     <li><strong>SEO: Os Segredos do Google Que Ninguém Conta</strong> — Google News Initiative</li>
                 </ul>
             </div>
 
-            <h2>⚡ Habilidades &amp; Ferramentas</h2>
-            <div>
-                <span>Gestão de Equipes (18+ pessoas)</span>
-                <span>SEO On-page &amp; Off-page</span>
-                <span>Google Search Console</span>
-                <span>Google Analytics</span>
-                <span>Monetização &amp; AdSense</span>
-                <span>Tráfego Pago (Meta/Google Ads)</span>
-                <span>WordPress</span>
-                <span>Inteligência Artificial Aplicada</span>
-                <span>Edição de Vídeo &amp; Áudio</span>
-                <span>Inglês Avançado</span>
-                <span>Espanhol Avançado</span>
+            <h2 class="section-title">⚡ Habilidades & Ferramentas</h2>
+            <div class="skills-wrapper">
+                <span class="badge">Gestão de Equipes (18+ pessoas)</span>
+                <span class="badge">SEO On-page & Off-page</span>
+                <span class="badge">Google Search Console</span>
+                <span class="badge">Google Analytics</span>
+                <span class="badge">Monetização & AdSense</span>
+                <span class="badge">Tráfego Pago (Meta/Google Ads)</span>
+                <span class="badge">WordPress</span>
+                <span class="badge">Inteligência Artificial Aplicada</span>
+                <span class="badge">Edição de Vídeo & Áudio</span>
+                <span class="badge">Inglês Avançado</span>
+                <span class="badge">Espanhol Avançado</span>
             </div>
         </section>
 
         <footer>
-            <p>© Daniel Boechat — Jornalista &amp; Gestor de Mídia Digital</p>
+            <p>© Daniel Boechat — Jornalista & Gestor de Mídia Digital</p>
         </footer>
 
     </div>
 
-```
+</body>
+</html>
