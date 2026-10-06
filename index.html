@@ -1,784 +1,345 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
     
-    <!-- TÍTULO E METADADOS BÁSICOS -->
-    <title>Daniel Boechat | Jornalista & Gestor de Mídia Digital</title>
-    <meta name="description" content="Portfólio profissional de Daniel Boechat. Jornalista e Gestor de Mídia Digital especialista em SEO, crescimento de audiência, estratégia editorial e gestão de produtos.">
-    <meta name="author" content="Daniel Boechat">
+    
+    
+    
+    
+    
+    
 
-    <!-- OPEN GRAPH (WhatsApp, LinkedIn, Facebook) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://danielmboechat.github.io/portfolio/">
-    <meta property="og:title" content="Daniel Boechat | Jornalista & Gestor de Mídia Digital">
-    <meta property="og:description" content="Jornalista e Gestor de Mídia Digital especialista em SEO, crescimento de audiência, estratégia editorial e gestão de performance. Confira cases e reportagens.">
-    <meta property="og:image" content="https://danielmboechat.github.io/portfolio/foto-perfil.jpg">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="Portfólio Daniel Boechat">
+    
+    
+    
+    
+    
+    
+    
+    
 
-    <!-- TWITTER CARDS -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://danielmboechat.github.io/portfolio/">
-    <meta name="twitter:title" content="Daniel Boechat | Jornalista & Gestor de Mídia Digital">
-    <meta name="twitter:description" content="Jornalista e Gestor de Mídia Digital especialista em SEO, crescimento de audiência, estratégia editorial e gestão de performance. Confira cases e reportagens.">
-    <meta name="twitter:image" content="https://danielmboechat.github.io/portfolio/foto-perfil.jpg">
+    
+    
+    
+    
+    
+    
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link rel="stylesheet" />
 
-    <style>
-        :root {
-            --primary: #111812;          /* Preto fechado com tom de fundo verde-escuro */
-            --primary-gradient: #223626; /* Verde musgo escuro para o topo */
-            --accent: #2e5a36;           /* Verde musgo para botões, tags e links */
-            --accent-hover: #214227;     /* Verde musgo fechado no hover */
-            --bg-body: #f2f5f3;          /* Fundo suave com leve tom musgo/acinzentado */
-            --bg-card: #ffffff;          /* Cartões brancos para contraste */
-            --text-main: #161d17;        /* Texto principal */
-            --text-muted: #4e5c50;       /* Texto secundário */
-            --border: #d4ded6;           /* Borda em tom musgo sutil */
-            --gold: #d97706;
-            --gold-bg: #fffbeb;
-        }
+    
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-bottom: 60px;
-        }
-
-        .container {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* HEADER / HERO */
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-gradient) 100%);
-            color: #ffffff;
-            padding: 60px 0;
-            margin-bottom: 40px;
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 16px;
-        }
-
-        /* FOTO DE PERFIL */
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-            margin-bottom: 8px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        .hero .subtitle {
-            font-size: 1.2rem;
-            color: #d1ded3;
-            font-weight: 400;
-        }
-
-        .hero .meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            font-size: 0.95rem;
-            color: #e2ebe4;
-            margin-top: 10px;
-        }
-
-        .hero .meta a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .hero .meta a:hover {
-            text-decoration: underline;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 500;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-outline:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        /* SECTIONS */
-        section {
-            margin-bottom: 48px;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 20px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--border);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* BIO & RESUMO */
-        .bio-text {
-            font-size: 1.05rem;
-            color: var(--text-main);
-            background: var(--bg-card);
-            padding: 24px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-        }
-
-        /* METRICS & HIGHLIGHT CARDS */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .metric-card {
-            background: var(--bg-card);
-            padding: 24px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            border-left: 4px solid var(--accent);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-        }
-
-        .metric-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--primary);
-        }
-
-        .metric-card p {
-            font-size: 0.98rem;
-            color: var(--text-main);
-            line-height: 1.5;
-        }
-
-        /* PORTFOLIO GRID */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--bg-card);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.06);
-        }
-
-        .card-tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            padding: 4px 8px;
-            border-radius: 4px;
-            background-color: #eaf2eb;
-            color: var(--accent);
-            margin-bottom: 12px;
-            width: fit-content;
-        }
-
-        .card h4 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 12px;
-            line-height: 1.4;
-        }
-
-        .card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-decoration: none;
-            margin-top: 12px;
-        }
-
-        .card-link:hover {
-            text-decoration: underline;
-        }
-
-        /* BANNERS */
-        .special-banner {
-            background: var(--gold-bg);
-            border: 1px solid #fde68a;
-            border-left: 5px solid var(--gold);
-            padding: 24px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-        }
-
-        .special-banner h3 {
-            color: #92400e;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .special-banner p {
-            color: #78350f;
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
-
-        .drive-banner {
-            background: #f0f8f2;
-            border: 1px solid #b8e2c0;
-            border-left: 5px solid var(--accent);
-            padding: 24px;
-            border-radius: 12px;
-        }
-
-        .drive-banner h3 {
-            color: #173b1f;
-            font-size: 1.2rem;
-            margin-bottom: 8px;
-        }
-
-        .drive-banner p {
-            color: #1a4223;
-            font-size: 0.95rem;
-            margin-bottom: 16px;
-        }
-
-        .btn-success {
-            background-color: var(--accent);
-            color: #ffffff;
-        }
-
-        .btn-success:hover {
-            background-color: var(--accent-hover);
-        }
-
-        /* SKILLS & BADGES */
-        .skills-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .badge {
-            background: #e2ebe4;
-            color: var(--primary);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        /* GALERIA DE FOTOS / CARROSSEL */
-        .carousel-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .carousel-container {
-            display: flex;
-            gap: 16px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            padding: 10px 0;
-            scrollbar-width: thin;
-        }
-
-        .carousel-container::-webkit-scrollbar {
-            height: 6px;
-        }
-
-        .carousel-container::-webkit-scrollbar-thumb {
-            background-color: var(--border);
-            border-radius: 10px;
-        }
-
-        .carousel-card {
-            min-width: 280px;
-            max-width: 320px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            flex-shrink: 0;
-        }
-
-        .carousel-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-
-        .carousel-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .carousel-card .caption {
-            padding: 12px 16px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.4;
-        }
-
-        .carousel-btn {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            color: var(--primary);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            z-index: 10;
-            transition: background 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .carousel-btn:hover {
-            background: var(--border);
-        }
-
-        /* MODAL EXPANSÍVEL (LIGHTBOX) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .modal-content {
-            max-width: 90%;
-            max-height: 85vh;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #ffffff;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        footer {
-            text-align: center;
-            padding-top: 40px;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid var(--border);
-            margin-top: 60px;
-        }
-    </style>
-</head>
-<body>
-
-    <!-- HEADER / HERO -->
+    
     <header>
-        <div class="container hero">
-            <!-- FOTO DE PERFIL -->
-            <img src="foto-perfil.jpg" alt="Foto de Daniel Boechat" class="profile-img">
+        <div>
+            
+            
 
             <h1>Daniel Boechat</h1>
-            <div class="subtitle">Jornalista & Gestor de Mídia Digital (MTB - 0002221/AM)</div>
-            <div class="meta">
+            <div>Jornalista &amp; Gestor de Mídia Digital (MTB - 0002221/AM)</div>
+            <div>
                 <span>📍 São José dos Campos, SP</span>
                 <span>✉️ <a href="mailto:danielmboechat@gmail.com">danielmboechat@gmail.com</a></span>
-                <span>📞 <a href="tel:+5512991810678">(12) 99181-0678</a></span>
+                <span>📞 <a href="about:invalid#zClosurez">(12) 99181-0678</a></span>
             </div>
-            <div class="hero-buttons">
-                <a href="https://www.linkedin.com/in/danboex/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <div>
+                <a href="https://www.linkedin.com/in/danboex/" target="_blank" rel="noopener noreferrer">
                     LinkedIn ↗
                 </a>
-                <a href="https://instagram.com/danielboechat_" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <a href="https://instagram.com/danielboechat_" target="_blank" rel="noopener noreferrer">
                     Instagram ↗
                 </a>
             </div>
         </div>
     </header>
 
-    <div class="container">
+    <div>
 
-        <!-- RESUMO PROFISSIONAL -->
+        
         <section>
-            <h2 class="section-title">👤 Perfil Profissional</h2>
-            <div class="bio-text">
+            <h2>👤 Perfil Profissional</h2>
+            <div>
                 Jornalista e gestor de comunicação com experiência em coordenação de equipes multimídia, desenvolvimento de pautas estratégicas e gestão de produtos digitais. Analista de audiência digital (SEO e monetização), entusiasta da inteligência artificial aplicada ao jornalismo e atuante na gestão empresarial.
             </div>
         </section>
 
-        <!-- DESTAQUES DE PERFORMANCE & CASES -->
+        
         <section>
-            <h2 class="section-title">📊 Cases de Sucesso & Performance</h2>
-            <div class="metrics-grid">
-                <div class="metric-card">
+            <h2>📊 Cases de Sucesso &amp; Performance</h2>
+            <div>
+                <div>
                     <h3>Grupo Norte / TV Norte (SBT)</h3>
                     <p>Reestruturação da estratégia de SEO do Portal Norte (NC News), gestão de equipe multidisciplinar de 18 pessoas, com alta de <strong>+407% na receita digital</strong> (AdSense/Display).</p>
                 </div>
-                <div class="metric-card">
+                <div>
                     <h3>JCK Corretora de Seguros</h3>
                     <p>Elevação da média de faturamento recorrente em <strong>23,3%</strong> e recorde histórico de arrecadação, com alta de <strong>+59%</strong>.</p>
                 </div>
             </div>
         </section>
 
-        <!-- PREMIAÇÃO -->
+        
         <section>
-            <h2 class="section-title">🏆 Premiação</h2>
-            <div class="special-banner">
+            <h2>🏆 Premiação</h2>
+            <div>
                 <h3>Prêmio Sebrae de Jornalismo — Etapa Estadual Amazonas (2025)</h3>
                 <p>Conquista de feito inédito na etapa estadual do Prêmio Sebrae de Jornalismo com cobertura especial focada no desenvolvimento regional e empreendedorismo.</p>
-                <a href="https://thomazrural.com.br/2025/09/27/amazonas-conquista-feito-inedito-na-etapa-estadual-do-premio-sebrae-de-jornalismo/" target="_blank" rel="noopener noreferrer" class="card-link" style="color: var(--gold);">
+                <a href="https://thomazrural.com.br/2025/09/27/amazonas-conquista-feito-inedito-na-etapa-estadual-do-premio-sebrae-de-jornalismo/" target="_blank" rel="noopener noreferrer">
                     Ver Matéria sobre a Premiação ↗
                 </a>
             </div>
         </section>
 
-        <!-- DESTAQUES DE PRODUÇÃO / REPORTAGENS -->
+        
         <section>
-            <h2 class="section-title">📰 Reportagens e Trabalhos de Destaque</h2>
+            <h2>📚 Publicação em Livro</h2>
+            <div>
+                <h3>Futebol e Teoria da Comunicação: De Ensaios a Lazarsfeld</h3>
+                <p>Coautoria e publicação de ensaio acadêmico integrando a coletânea que analisa as conexões entre o fenômeno do esporte, teorias de comunicação, mídia e dinâmica social.</p>
+                <a href="https://www.amazon.com.br/dp/B07K1PNWLQ" target="_blank" rel="noopener noreferrer">
+                    Ver Livro na Amazon ↗
+                </a>
+            </div>
+        </section>
+
+        
+        <section>
+            <h2>📰 Reportagens e Trabalhos de Destaque</h2>
             
-            <div class="portfolio-grid">
-                <!-- Card 1 -->
-                <div class="card">
+            <div>
+                
+                <div>
                     <div>
-                        <span class="card-tag">Cultura & Sociedade</span>
+                        <span>Cultura &amp; Sociedade</span>
                         <h4>Ancestralidade Sateré-Mawé mantém tradição indígena viva com o ritual da Tucandeira</h4>
                     </div>
-                    <a href="https://portalnorte.com.br/noticias/amazonas/2025/04/19/ancestralidade-satere-mawe-mantem-tradicao-indigena-viva-com-o-ritual-da-tucandeira/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Portal Norte ↗</a>
+                    <a href="https://portalnorte.com.br/noticias/amazonas/2025/04/19/ancestralidade-satere-mawe-mantem-tradicao-indigena-viva-com-o-ritual-da-tucandeira/" target="_blank" rel="noopener noreferrer">Ler no Portal Norte ↗</a>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Moda & Identidade</span>
+                        <span>Moda &amp; Identidade</span>
                         <h4>Ateliê Derequine promove moda indígena no Amazonas</h4>
                     </div>
-                    <a href="https://vanguardadonorte.com.br/cultura/atelie-derequine-promove-moda-indigena-no-amazonas/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Vanguarda do Norte ↗</a>
+                    <a href="https://vanguardadonorte.com.br/cultura/atelie-derequine-promove-moda-indigena-no-amazonas/" target="_blank" rel="noopener noreferrer">Ler no Vanguarda do Norte ↗</a>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Sustentabilidade</span>
+                        <span>Sustentabilidade</span>
                         <h4>Grife amazônica aposta na fibra do curauá para promover revolução silenciosa na moda</h4>
                     </div>
-                    <a href="https://portalnorte.com.br/noticias/2025/06/06/grife-amazonica-aposta-na-fibra-do-curaua-para-promover-revolucao-silenciosa-na-moda/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Portal Norte ↗</a>
+                    <a href="https://portalnorte.com.br/noticias/2025/06/06/grife-amazonica-aposta-na-fibra-do-curaua-para-promover-revolucao-silenciosa-na-moda/" target="_blank" rel="noopener noreferrer">Ler no Portal Norte ↗</a>
                 </div>
 
-                <!-- Card 4 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Meio Ambiente</span>
+                        <span>Meio Ambiente</span>
                         <h4>Seca no Amazonas: Rio Negro atinge menor nível histórico e supera 2023</h4>
                     </div>
-                    <a href="https://portalnorte.com.br/noticias/amazonas/2024/10/03/seca-no-amazonas-rio-negro-atinge-menor-nivel-historico-e-supera-2023/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Portal Norte ↗</a>
+                    <a href="https://portalnorte.com.br/noticias/amazonas/2024/10/03/seca-no-amazonas-rio-negro-atinge-menor-nivel-historico-e-supera-2023/" target="_blank" rel="noopener noreferrer">Ler no Portal Norte ↗</a>
                 </div>
 
-                <!-- Card 5 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Economia</span>
+                        <span>Economia</span>
                         <h4>Empréstimo consignado: herói ou vilão no endividamento?</h4>
                     </div>
-                    <a href="https://vanguardadonorte.com.br/economia/emprestimo-consignado-heroi-ou-vilao-no-endividamento/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Vanguarda do Norte ↗</a>
+                    <a href="https://vanguardadonorte.com.br/economia/emprestimo-consignado-heroi-ou-vilao-no-endividamento/" target="_blank" rel="noopener noreferrer">Ler no Vanguarda do Norte ↗</a>
                 </div>
 
-                <!-- Card 6 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Mercado Financeiro</span>
+                        <span>Mercado Financeiro</span>
                         <h4>EQI aposta em democratização de investimentos e amplia atuação no mercado regional</h4>
                     </div>
-                    <a href="https://vanguardadonorte.com.br/economia/eqi-aposta-em-democratizacao-de-investimentos-e-amplia-atuacao-no-mercado-regional/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Vanguarda do Norte ↗</a>
+                    <a href="https://vanguardadonorte.com.br/economia/eqi-aposta-em-democratizacao-de-investimentos-e-amplia-atuacao-no-mercado-regional/" target="_blank" rel="noopener noreferrer">Ler no Vanguarda do Norte ↗</a>
                 </div>
 
-                <!-- Card 7 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Saúde & Inclusão</span>
+                        <span>Saúde &amp; Inclusão</span>
                         <h4>AMA promove cuidado assistencial ao autismo em Manaus</h4>
                     </div>
-                    <a href="https://vanguardadonorte.com.br/amazonas/ama-promove-cuidado-assistencial-ao-autismo-em-manaus/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Vanguarda do Norte ↗</a>
+                    <a href="https://vanguardadonorte.com.br/amazonas/ama-promove-cuidado-assistencial-ao-autismo-em-manaus/" target="_blank" rel="noopener noreferrer">Ler no Vanguarda do Norte ↗</a>
                 </div>
 
-                <!-- Card 8 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Cultura & Eventos</span>
+                        <span>Cultura &amp; Eventos</span>
                         <h4>Com BK e Victor Xamã, O Bailinn tem recorde de público</h4>
                     </div>
-                    <a href="https://portalnorte.com.br/noticias/amazonas/2024/07/22/com-bk-e-victor-xama-o-bailinn-tem-recorde-de-publico/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no Portal Norte ↗</a>
+                    <a href="https://portalnorte.com.br/noticias/amazonas/2024/07/22/com-bk-e-victor-xama-o-bailinn-tem-recorde-de-publico/" target="_blank" rel="noopener noreferrer">Ler no Portal Norte ↗</a>
                 </div>
 
-                <!-- Card 9 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Humanitário / ONU</span>
+                        <span>Humanitário / ONU</span>
                         <h4>OIM ajuda a prevenir COVID-19 entre comunidades indígenas e ribeirinhas brasileiras</h4>
                     </div>
-                    <a href="https://brasil.un.org/pt-br/110023-oim-ajuda-prevenir%C2%A0covid-19-entre-comunidades-ind%C3%ADgenas-e-ribeirinhas-brasileiras" target="_blank" rel="noopener noreferrer" class="card-link">Ler na ONU Brasil ↗</a>
+                    <a href="https://brasil.un.org/pt-br/110023-oim-ajuda-prevenir%C2%A0covid-19-entre-comunidades-ind%C3%ADgenas-e-ribeirinhas-brasileiras" target="_blank" rel="noopener noreferrer">Ler na ONU Brasil ↗</a>
                 </div>
 
-                <!-- Card 10 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Humanitário / ONU</span>
+                        <span>Humanitário / ONU</span>
                         <h4>Exposição fotográfica apresenta contexto diverso da migração no Brasil</h4>
                     </div>
-                    <a href="https://brasil.un.org/pt-br/106061-exposi%C3%A7%C3%A3o-fotogr%C3%A1fica-apresenta-contexto-diverso-da-migra%C3%A7%C3%A3o-no-brasil" target="_blank" rel="noopener noreferrer" class="card-link">Ler na ONU Brasil ↗</a>
+                    <a href="https://brasil.un.org/pt-br/106061-exposi%C3%A7%C3%A3o-fotogr%C3%A1fica-apresenta-contexto-diverso-da-migra%C3%A7%C3%A3o-no-brasil" target="_blank" rel="noopener noreferrer">Ler na ONU Brasil ↗</a>
                 </div>
 
-                <!-- Card 11 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Cultura Regional</span>
+                        <span>Cultura Regional</span>
                         <h4>Dia do Folclore promove valorização da cultura do Vale do Paraíba</h4>
                     </div>
-                    <a href="https://www.012news.com.br/dia-do-folclore-promove-valorizacao-da-cultura-do-vale-do-paraiba/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no 012 News ↗</a>
+                    <a href="https://www.012news.com.br/dia-do-folclore-promove-valorizacao-da-cultura-do-vale-do-paraiba/" target="_blank" rel="noopener noreferrer">Ler no 012 News ↗</a>
                 </div>
 
-                <!-- Card 12 -->
-                <div class="card">
+                
+                <div>
                     <div>
-                        <span class="card-tag">Esportes</span>
+                        <span>Esportes</span>
                         <h4>São José E.C. apresenta comissão técnica e filosofia de jogo com técnico Max Sandro</h4>
                     </div>
-                    <a href="https://www.012news.com.br/sao-jose-e-c-apresenta-comissao-tecnica-e-filosofia-de-jogo-com-tecnico-max-sandro/" target="_blank" rel="noopener noreferrer" class="card-link">Ler no 012 News ↗</a>
+                    <a href="https://www.012news.com.br/sao-jose-e-c-apresenta-comissao-tecnica-e-filosofia-de-jogo-com-tecnico-max-sandro/" target="_blank" rel="noopener noreferrer">Ler no 012 News ↗</a>
                 </div>
             </div>
         </section>
 
-        <!-- ACERVO DE JORNALISMO IMPRESSO (DRIVE) -->
+        
         <section>
-            <h2 class="section-title">🗞️ Jornalismo Impresso</h2>
-            <div class="drive-banner">
+            <h2>🗞️ Jornalismo Impresso</h2>
+            <div>
                 <h3>Acervo de Páginas e Edições Impressas</h3>
                 <p>Acesse o repositório completo contendo reportagens especiais, capas e diagramações publicadas em jornais impressos ao longo da trajetória profissional.</p>
-                <a href="https://drive.google.com/drive/folders/10gX91xzZtCSWbrOHubbnxGUPMBCM09N5" target="_blank" rel="noopener noreferrer" class="btn btn-success">
+                <a href="https://drive.google.com/drive/folders/10gX91xzZtCSWbrOHubbnxGUPMBCM09N5" target="_blank" rel="noopener noreferrer">
                     📁 Abrir Pasta no Google Drive ↗
                 </a>
             </div>
         </section>
 
-        <!-- HABILIDADES & FERRAMENTAS -->
+        
         <section>
-            <h2 class="section-title">⚡ Habilidades & Ferramentas</h2>
-            <div class="skills-wrapper">
-                <span class="badge">Gestão de Equipes (18+ pessoas)</span>
-                <span class="badge">SEO On-page & Off-page</span>
-                <span class="badge">Google Search Console</span>
-                <span class="badge">Google Analytics</span>
-                <span class="badge">Monetização & AdSense</span>
-                <span class="badge">Tráfego Pago (Meta/Google Ads)</span>
-                <span class="badge">WordPress</span>
-                <span class="badge">Inteligência Artificial Aplicada (GEO/AEO)</span>
-                <span class="badge">Edição de Vídeo & Áudio</span>
-                <span class="badge">Inglês Avançado</span>
-                <span class="badge">Espanhol Avançado</span>
+            <h2>⚡ Habilidades &amp; Ferramentas</h2>
+            <div>
+                <span>Gestão de Equipes (18+ pessoas)</span>
+                <span>SEO On-page &amp; Off-page</span>
+                <span>Google Search Console</span>
+                <span>Google Analytics</span>
+                <span>Monetização &amp; AdSense</span>
+                <span>Tráfego Pago (Meta/Google Ads)</span>
+                <span>WordPress</span>
+                <span>Inteligência Artificial Aplicada (GEO/AEO)</span>
+                <span>Edição de Vídeo &amp; Áudio</span>
+                <span>Inglês Avançado</span>
+                <span>Espanhol Avançado</span>
             </div>
         </section>
 
-        <!-- GALERIA DE FOTOS / BASTIDORES DE CAMPO -->
+        
         <section>
-            <h2 class="section-title">📸 Atuação e Bastidores</h2>
-            <div class="carousel-wrapper">
-                <button class="carousel-btn" onclick="scrollCarousel(-320)">❮</button>
+            <h2>📸 Atuação e Bastidores</h2>
+            <div>
+                
 
-                <div class="carousel-container" id="carousel">
-                    <!-- Foto 1 -->
-                    <div class="carousel-card" onclick="openModal('galeria (1).jpg')">
-                        <img src="galeria (1).jpg" alt="Atuação e Bastidores 1">
-                        <div class="caption">Participação de seminários e convenções na Região Amazônica.</div>
+                <div>
+                    
+                    <div>
+                        
+                        <div>Cobertura de campo e reportagens na Região Amazônica.</div>
                     </div>
 
-                    <!-- Foto 2 -->
-                    <div class="carousel-card" onclick="openModal('galeria (2).jpg')">
-                        <img src="galeria (2).jpg" alt="Atuação e Bastidores 2">
-                        <div class="caption">Bastidores de participação ao vivo para falar de esportes.</div>
+                    
+                    <div>
+                        
+                        <div>Bastidores de gravação e reportagem multimídia.</div>
                     </div>
 
-                    <!-- Foto 3 -->
-                    <div class="carousel-card" onclick="openModal('galeria (3).jpg')">
-                        <img src="galeria (3).jpg" alt="Atuação e Bastidores 3">
-                        <div class="caption">Condução de entrevistas e coberturas jornalísticas.</div>
+                    
+                    <div>
+                        
+                        <div>Condução de entrevistas e coberturas jornalísticas.</div>
                     </div>
 
-                    <!-- Foto 4 -->
-                    <div class="carousel-card" onclick="openModal('galeria (4).jpg')">
-                        <img src="galeria (4).jpg" alt="Atuação e Bastidores 4">
-                        <div class="caption">Atuação em comunicação institucional e eventos.</div>
+                    
+                    <div>
+                        
+                        <div>Atuação em comunicação institucional e eventos.</div>
                     </div>
 
-                    <!-- Foto 5 -->
-                    <div class="carousel-card" onclick="openModal('galeria (5).jpg')">
-                        <img src="galeria (5).jpg" alt="Atuação e Bastidores 5">
-                        <div class="caption">Reconhecimento por coordenação de equipe e produção em redação.</div>
+                    
+                    <div>
+                        
+                        <div>Coordenação de equipe e produção em redação.</div>
                     </div>
 
-                    <!-- Foto 6 -->
-                    <div class="carousel-card" onclick="openModal('galeria (6).jpg')">
-                        <img src="galeria (6).jpg" alt="Atuação e Bastidores 6">
-                        <div class="caption">Registros em ações humanitárias na Amazônia.</div>
+                    
+                    <div>
+                        
+                        <div>Registros em pautas especiais e projetos editoriais.</div>
                     </div>
 
-                    <!-- Foto 7 -->
-                    <div class="carousel-card" onclick="openModal('galeria (7).jpg')">
-                        <img src="galeria (7).jpg" alt="Atuação e Bastidores 7">
-                        <div class="caption">Cobertura jornalística em eventos e solenidades.</div>
+                    
+                    <div>
+                        
+                        <div>Cobertura jornalística em eventos e solenidades.</div>
                     </div>
 
-                    <!-- Foto 8 -->
-                    <div class="carousel-card" onclick="openModal('galeria (8).jpg')">
-                        <img src="galeria (8).jpg" alt="Atuação e Bastidores 8">
-                        <div class="caption">Trabalho de cobertura em eventos e shows.</div>
+                    
+                    <div>
+                        
+                        <div>Trabalho de campo e relacionamento comunitário.</div>
                     </div>
 
-                    <!-- Foto 9 -->
-                    <div class="carousel-card" onclick="openModal('galeria (9).jpg')">
-                        <img src="galeria (9).jpg" alt="Atuação e Bastidores 9">
-                        <div class="caption">Atuação na produção audiovisual e de notícias.</div>
+                    
+                    <div>
+                        
+                        <div>Atuação na produção audiovisual e de notícias.</div>
                     </div>
 
-                    <!-- Foto 10 -->
-                    <div class="carousel-card" onclick="openModal('galeria (10).jpg')">
-                        <img src="galeria (10).jpg" alt="Atuação e Bastidores 10">
-                        <div class="caption">Acompanhamento e suporte em transmissões.</div>
+                    
+                    <div>
+                        
+                        <div>Acompanhamento e suporte em transmissões.</div>
                     </div>
 
-                    <!-- Foto 11 -->
-                    <div class="carousel-card" onclick="openModal('galeria (11).jpg')">
-                        <img src="galeria (11).jpg" alt="Atuação e Bastidores 11">
-                        <div class="caption">Acervo de registros da trajetória profissional.</div>
+                    
+                    <div>
+                        
+                        <div>Acervo de registros da trajetória profissional.</div>
                     </div>
                 </div>
 
-                <button class="carousel-btn" onclick="scrollCarousel(320)">❯</button>
+                
             </div>
         </section>
 
         <footer>
-            <p>© Daniel Boechat — Jornalista & Gestor de Mídia Digital</p>
+            <p>© Daniel Boechat — Jornalista &amp; Gestor de Mídia Digital</p>
         </footer>
 
     </div>
 
-    <!-- MODAL PARA EXPANDIR IMAGEM (LIGHTBOX) -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="modal-close">&times;</span>
-        <img class="modal-content" id="imgExpanded" alt="Imagem Expandida">
+    
+    <div>
+        <span>×</span>
+        
     </div>
 
-    <!-- SCRIPT DO CARROSSEL E MODAL -->
-    <script>
-        function scrollCarousel(distance) {
-            document.getElementById('carousel').scrollBy({
-                left: distance,
-                behavior: 'smooth'
-            });
-        }
+    
+    
 
-        function openModal(imgSrc) {
-            document.getElementById('imgExpanded').src = imgSrc;
-            document.getElementById('imageModal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('imageModal').style.display = 'none';
-        }
-    </script>
-
-</body>
-</html>
+```
