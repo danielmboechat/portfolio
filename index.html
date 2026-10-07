@@ -363,7 +363,7 @@
             font-weight: 500;
         }
 
-        /* GALERIA DE FOTOS / CARROSSEL */
+        /* GALERIA DE FOTOS / CARROSSEL (AJUSTADO PARA FORMATO VERTICAL / RETRATO) */
         .carousel-wrapper {
             position: relative;
             display: flex;
@@ -390,8 +390,8 @@
         }
 
         .carousel-card {
-            min-width: 280px;
-            max-width: 320px;
+            min-width: 220px;
+            max-width: 240px;
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 12px;
@@ -408,7 +408,7 @@
 
         .carousel-card img {
             width: 100%;
-            height: 200px;
+            height: 350px;
             object-fit: cover;
             display: block;
         }
@@ -708,19 +708,19 @@
         <section>
             <h2 class="section-title">📸 Atuação e Bastidores</h2>
             <div class="carousel-wrapper">
-                <button class="carousel-btn" onclick="scrollCarousel(-320)">❮</button>
+                <button class="carousel-btn" onclick="scrollCarousel(-260)">❮</button>
 
                 <div class="carousel-container" id="carousel">
                     <!-- Foto 1 -->
                     <div class="carousel-card" onclick="openModal('galeria (1).jpg')">
                         <img src="galeria (1).jpg" alt="Atuação e Bastidores 1">
-                        <div class="caption">Participação em seminários e convenções.</div>
+                        <div class="caption">Cobertura de campo e reportagens na Região Amazônica.</div>
                     </div>
 
                     <!-- Foto 2 -->
                     <div class="carousel-card" onclick="openModal('galeria (2).jpg')">
                         <img src="galeria (2).jpg" alt="Atuação e Bastidores 2">
-                        <div class="caption">Participações ao vivo para falar de esportes.</div>
+                        <div class="caption">Bastidores de gravação e reportagem multimídia.</div>
                     </div>
 
                     <!-- Foto 3 -->
@@ -738,13 +738,13 @@
                     <!-- Foto 5 -->
                     <div class="carousel-card" onclick="openModal('galeria (5).jpg')">
                         <img src="galeria (5).jpg" alt="Atuação e Bastidores 5">
-                        <div class="caption">Reconhecimento por coordenação de equipe e produção em redação.</div>
+                        <div class="caption">Coordenação de equipe e produção em redação.</div>
                     </div>
 
                     <!-- Foto 6 -->
                     <div class="carousel-card" onclick="openModal('galeria (6).jpg')">
                         <img src="galeria (6).jpg" alt="Atuação e Bastidores 6">
-                        <div class="caption">Participação em ações humanitárias na Amazônia.</div>
+                        <div class="caption">Registros em pautas especiais e projetos editoriais.</div>
                     </div>
 
                     <!-- Foto 7 -->
@@ -756,7 +756,7 @@
                     <!-- Foto 8 -->
                     <div class="carousel-card" onclick="openModal('galeria (8).jpg')">
                         <img src="galeria (8).jpg" alt="Atuação e Bastidores 8">
-                        <div class="caption">Coberturas in loco de shows e eventos culturais.</div>
+                        <div class="caption">Trabalho de campo e relacionamento comunitário.</div>
                     </div>
 
                     <!-- Foto 9 -->
@@ -778,7 +778,7 @@
                     </div>
                 </div>
 
-                <button class="carousel-btn" onclick="scrollCarousel(320)">❯</button>
+                <button class="carousel-btn" onclick="scrollCarousel(260)">❯</button>
             </div>
         </section>
 
